@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class StateScript : MonoBehaviour {
+
+    public StateScript onA;
+    public StateScript onB;
 
 	// Use this for initialization
 	void Start () {
-        print("Hi");
+        
 	}
 	
 	// Update is called once per frame

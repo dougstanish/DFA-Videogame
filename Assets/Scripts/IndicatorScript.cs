@@ -5,10 +5,11 @@ using UnityEngine;
 public class IndicatorScript : MonoBehaviour {
 
     public StateScript state;
+    StateScript startState;
 
 	// Use this for initialization
 	void Start () {
-        
+        startState = state;
 	}
 	
 	// Update is called once per frame
@@ -31,18 +32,24 @@ public class IndicatorScript : MonoBehaviour {
     void ChangeStateA()
     {
         state = state.onA;
-        updatePosition();
+        UpdatePosition();
     }
 
     void ChangeStateB()
     {
         state = state.onB;
-        updatePosition();
+        UpdatePosition();
     }
 
-    void updatePosition()
+    void UpdatePosition()
     {
         GameObject o = state.gameObject;
         transform.position = o.transform.position;
+    }
+
+    public void Reset()
+    {
+        state = startState;
+        UpdatePosition();
     }
 }

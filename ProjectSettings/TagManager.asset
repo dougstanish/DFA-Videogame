@@ -4,11 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Indicator
+  - StringRecorder
+  - Button
   - Bank
   - ButtonManager
-  - Button
-  - StringRecorder
   layers:
   - Default
   - TransparentFX
@@ -18,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Front
   - 
   - 
   - 
@@ -45,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Front
+    uniqueID: 1200653003
     locked: 0

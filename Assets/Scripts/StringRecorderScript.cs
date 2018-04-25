@@ -26,7 +26,7 @@ public class StringRecorderScript : MonoBehaviour {
     {
         foreach (string word in s.Split('\n'))
         {
-            if (str.text.Equals(word)) return false;
+            if (word.Length >= 2 && str.text.Equals(word.Substring(0, word.Length - 2))) return false;
         }
         return true;
     }

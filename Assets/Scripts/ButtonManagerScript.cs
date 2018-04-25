@@ -5,14 +5,17 @@ using UnityEngine.UI;
 
 public class ButtonManagerScript : MonoBehaviour {
 
-    WordButtonScript[] buttons = new WordButtonScript[8];
+    static int MAX_BUTTONS = 12;
+    WordButtonScript[] buttons = new WordButtonScript[MAX_BUTTONS];
     public string[] correctAnswers;
     public Text correct;
     public Button nextLevel;
+    public GameObject fullReveal;
+    bool solved;
 
 	// Use this for initialization
 	void Start () {
-
+        solved = false;
 	}
 	
 	// Update is called once per frame
@@ -34,7 +37,7 @@ public class ButtonManagerScript : MonoBehaviour {
         string s = CalculateSentence();
         foreach(string ans in correctAnswers)
         {
-            if (s.Equals(ans))
+            if (s.Equals(ans) && !solved)
             {
                 NextLevel();
             }
@@ -47,7 +50,7 @@ public class ButtonManagerScript : MonoBehaviour {
         while (buttons[i] != null)
         {
             i++;
-            if(i == 8)
+            if(i == MAX_BUTTONS)
             {
                 return;
             }
@@ -59,7 +62,7 @@ public class ButtonManagerScript : MonoBehaviour {
     public bool RemoveButton(WordButtonScript bt)
     {
         int ind = -1;
-        for(int i = 0; i < 8; i++)
+        for(int i = 0; i < MAX_BUTTONS; i++)
         {
             if (buttons[i] != null && buttons[i].Equals(bt))
             {
@@ -77,7 +80,7 @@ public class ButtonManagerScript : MonoBehaviour {
     public string CalculateSentence()
     {
         string ret = "";
-        for(int i = 0; i < 8; i++)
+        for(int i = 0; i < MAX_BUTTONS; i++)
         {
             WordButtonScript b = buttons[i];
             if(b != null)
@@ -93,8 +96,10 @@ public class ButtonManagerScript : MonoBehaviour {
     }
 
     void NextLevel(){
+        solved = true;
         correct.transform.Translate(new Vector3(0, -200, 0));
         nextLevel.transform.Translate(new Vector3(0, -200, 0));
+        fullReveal.transform.Translate(new Vector3(20, 0, 0));
     }
 }
 

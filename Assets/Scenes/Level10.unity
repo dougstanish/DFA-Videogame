@@ -1854,6 +1854,22 @@ Prefab:
         type: 2}
       propertyPath: onA
       value: 
+      objectReference: {fileID: 1855701171}
+    - target: {fileID: 212300589527928244, guid: 7750cc205e2425f41acaed48be69d20c,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 48070348d7c54034ab295a38c2af18a5,
+        type: 3}
+    - target: {fileID: 114273947064716768, guid: 7750cc205e2425f41acaed48be69d20c,
+        type: 2}
+      propertyPath: accept
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273947064716768, guid: 7750cc205e2425f41acaed48be69d20c,
+        type: 2}
+      propertyPath: onB
+      value: 
       objectReference: {fileID: 837175224}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7750cc205e2425f41acaed48be69d20c, type: 2}
@@ -3736,8 +3752,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctAnswers:
-  - 'number of a''s is a multiple of 2 '
-  - 'contains a multiple of 2 a''s '
+  - 'ends with not a multiple of 2 b''s '
+  - 'ends with 1 plus a multiple of 2 b''s '
+  - 'ends with a multiple of 2 b''s plus 1 '
   correct: {fileID: 1940336462}
   nextLevel: {fileID: 1513370881}
   fullReveal: {fileID: 1128580084}
@@ -4330,6 +4347,22 @@ Prefab:
     - target: {fileID: 114177322556616962, guid: 946dad7fd622e524c99ad1681313fa16,
         type: 2}
       propertyPath: onA
+      value: 
+      objectReference: {fileID: 1855701171}
+    - target: {fileID: 212487020126633332, guid: 946dad7fd622e524c99ad1681313fa16,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 213fd0b307756ab429bf93dca8248d1f,
+        type: 3}
+    - target: {fileID: 114177322556616962, guid: 946dad7fd622e524c99ad1681313fa16,
+        type: 2}
+      propertyPath: accept
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177322556616962, guid: 946dad7fd622e524c99ad1681313fa16,
+        type: 2}
+      propertyPath: onB
       value: 
       objectReference: {fileID: 1855701171}
     m_RemovedComponents: []

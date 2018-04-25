@@ -57,15 +57,13 @@ public class IndicatorScript : MonoBehaviour {
         }
         else if (Input.GetKeyDown("return"))
         {
-            if (state.accept)
+
+            StringBankScript s = GameObject.FindGameObjectWithTag("Bank").GetComponent<StringBankScript>();
+            if (srs.CheckUnique(s.bank.text))
             {
-                StringBankScript s = GameObject.FindGameObjectWithTag("Bank").GetComponent<StringBankScript>();
-                if (srs.CheckUnique(s.bank.text))
-                {
-                    Reset();
-                    s.AddString(srs.str.text);
-                    srs.str.text = "";
-                }
+                s.AddString(srs.str.text, state.accept);
+                srs.str.text = "";
+                Reset();
             }
         }
     }
@@ -93,7 +91,7 @@ public class IndicatorScript : MonoBehaviour {
         GameObject o = state.gameObject;
         target = o.transform.position;
         dir = (target - new Vector2(transform.position.x, transform.position.y)).normalized;
-        dir.Scale(new Vector2(0.15f, 0.15f));
+        dir.Scale(new Vector2(0.2f, 0.2f));
         moving = true;
     }
 

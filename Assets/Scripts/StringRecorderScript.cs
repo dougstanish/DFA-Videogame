@@ -19,37 +19,10 @@ public class StringRecorderScript : MonoBehaviour {
 
     void CheckKey()
     {
-        if (Input.GetKeyDown("a"))
-        {
-            str.text += "a";
-        }
-        else if (Input.GetKeyDown("b"))
-        {
-            str.text += "b";
-        }
-        else if (Input.GetKeyDown("escape"))
-        {
-            IndicatorScript i = GameObject.FindGameObjectWithTag("Indicator").GetComponent<IndicatorScript>();
-            i.Reset();
-            str.text = "";
-        }
-        else if (Input.GetKeyDown("return"))
-        {
-            IndicatorScript i = GameObject.FindGameObjectWithTag("Indicator").GetComponent<IndicatorScript>();
-            if (i.state.accept)
-            {
-                StringBankScript s = GameObject.FindGameObjectWithTag("Bank").GetComponent<StringBankScript>();
-                if (CheckUnique(s.bank.text))
-                {
-                    i.Reset();
-                    s.AddString(str.text);
-                    str.text = "";
-                }
-            }
-        }
+        
     }
 
-    bool CheckUnique(string s)
+    public bool CheckUnique(string s)
     {
         foreach (string word in s.Split('\n'))
         {

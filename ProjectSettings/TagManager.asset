@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Indicator
   - Bank
+  - ButtonManager
+  - Button
+  - StringRecorder
   layers:
   - Default
   - TransparentFX

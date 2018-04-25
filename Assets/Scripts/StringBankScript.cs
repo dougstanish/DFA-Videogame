@@ -19,6 +19,6 @@ public class StringBankScript : MonoBehaviour {
 
     public void AddString(string s)
     {
-        bank.text += s + "\n";
+        bank.text += s + " ✓\n";
     }
 }

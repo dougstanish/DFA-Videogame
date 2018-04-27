@@ -55,7 +55,7 @@ public class ButtonManagerScript : MonoBehaviour {
                 return;
             }
         }
-        bt.gameObject.transform.position = new Vector2(600 + (i % 4) * 75, 350 - (i / 4) * 30);
+        bt.gameObject.transform.position = new Vector2(700 + (i % 4) * 75, 650 - (i / 4) * 30);
         buttons[i] = bt;
     }
 
@@ -97,8 +97,8 @@ public class ButtonManagerScript : MonoBehaviour {
 
     void NextLevel(){
         solved = true;
-        correct.transform.Translate(new Vector3(0, -200, 0));
-        nextLevel.transform.Translate(new Vector3(0, -200, 0));
+        correct.transform.Translate(new Vector3(0, -500, 0));
+        nextLevel.transform.Translate(new Vector3(0, -500, 0));
         fullReveal.transform.Translate(new Vector3(20, 0, 0));
     }
 }

@@ -237,6 +237,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ButtonClickHandler.cs" />
     <Compile Include="Assets\Scripts\ButtonManagerScript.cs" />
+    <Compile Include="Assets\Scripts\HowTo.cs" />
     <Compile Include="Assets\Scripts\IndicatorScript.cs" />
     <Compile Include="Assets\Scripts\KeepAlive.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />

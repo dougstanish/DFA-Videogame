@@ -5,9 +5,22 @@ using UnityEngine;
 public class KeepAlive : MonoBehaviour
 {
 
+    static KeepAlive instance = null;
+
     void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+
+        if(instance != null)
+        {
+            Destroy(gameObject);
+        }
+
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(transform.gameObject);
+        }
+       
     }
 
 }

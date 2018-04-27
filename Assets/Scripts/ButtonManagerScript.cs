@@ -55,7 +55,7 @@ public class ButtonManagerScript : MonoBehaviour {
                 return;
             }
         }
-        bt.gameObject.transform.position = new Vector2(700 + (i % 4) * 75, 650 - (i / 4) * 30);
+        bt.gameObject.transform.position = new Vector2(800 + (i % 4) * 75, 550 - (i / 4) * 30);
         buttons[i] = bt;
     }
 
